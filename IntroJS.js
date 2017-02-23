@@ -175,6 +175,19 @@ def substring(string)
 end
 */
 
+const range = function(array, start, end) {
+  if (end < start) {
+    return [];
+  } else if ( end === start) {
+    return [array[start]];
+  } else {
+    return [array[start]] + range(array, start + 1, end);
+  }
+ };
+console.log(range([1,2,4,7,3], 1, 3));
+console.log(range([1,2,4,7,3], 3, 3));
+console.log(range([1,2,4,7,3], 4, 3));
+
 /* def range(start, end)
 
     return
